@@ -109,7 +109,7 @@ publishing {
             artifact javadocJar
 
             // Sign the pom
-            pom.withXml {
+            /*pom.withXml {
                 def pomFile = file("${project.buildDir}/generated-pom.xml")
                 writeTo(pomFile)
                 def pomAscFile = signing.sign(pomFile).signatureFiles[0]
@@ -118,7 +118,7 @@ publishing {
                     extension = 'pom.asc'
                 }
                 pomFile.delete()
-            }
+            }*/
 
             // Sign the artifacts
             project.tasks.signArchives.signatureFiles.each {
